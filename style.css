@@ -1,0 +1,119 @@
+*, 
+::after,
+::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%; /*1rem = 10px*/
+}
+body{
+    background-color: #eee;
+    font-family: 'Roboto', sans-serif;
+}
+li{
+    list-style: none;
+}
+a,
+a:active,
+a:link{
+    text-decoration: none;
+    color: inherit;
+}
+/* Navbar */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+    padding: 1.2rem 0;
+}
+
+/* Logo Section */
+.logo__section{
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+}
+/* Nav toggle */
+.nav-toggle{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+.nav-toggle:hover{
+    transform: rotate(90deg);
+}
+/* Menu section */
+.links{
+    display: flex;
+    gap: 4rem;
+}
+.links a{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    color: #526D82;
+    transition: all .2s;
+}
+.links a:hover{
+    color: #30A2FF;
+}
+
+/* Social Media Section */
+.social-icons{
+    display: flex;
+    gap: 1.5rem;
+}
+.social-icons a{
+    font-size: 1.4rem;
+    color: #30A2FF;
+    transition: all .2s;
+}
+.social-icons a:hover{
+    color: #73BBC9;
+}
+
+/* Media Query */
+@media only screen and (max-width: 900px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .navbar{
+        display: block;
+    }
+    .logo__section{
+        width: 85vw;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }
+    .social-icons{
+        display: none;
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .links{
+        display: block;
+        height: 0;
+        overflow: hidden;
+        width: 85vw;
+        margin: auto;
+        padding-top: 1.5rem;
+        padding-left: 1%;
+        transition: all .5s;
+    }
+    .links li{
+        font-size: 3rem;
+    }
+    .links li:not(:last-child){
+        margin-bottom: .5rem;
+    }
+}
+.show-links{
+    height: 19rem;
+}
